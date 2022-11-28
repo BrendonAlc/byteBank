@@ -1,0 +1,15 @@
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/bin/Debug/net6.0/bytebank
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/bin/Debug/net6.0/bytebank.deps.json
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/bin/Debug/net6.0/bytebank.runtimeconfig.json
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/bin/Debug/net6.0/bytebank.dll
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/bin/Debug/net6.0/bytebank.pdb
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/obj/Debug/net6.0/bytebank.csproj.AssemblyReference.cache
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/obj/Debug/net6.0/bytebank.GeneratedMSBuildEditorConfig.editorconfig
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/obj/Debug/net6.0/bytebank.AssemblyInfoInputs.cache
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/obj/Debug/net6.0/bytebank.AssemblyInfo.cs
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/obj/Debug/net6.0/bytebank.csproj.CoreCompileInputs.cache
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/obj/Debug/net6.0/bytebank.dll
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/obj/Debug/net6.0/refint/bytebank.dll
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/obj/Debug/net6.0/bytebank.pdb
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/obj/Debug/net6.0/bytebank.genruntimeconfig.cache
+/home/balcantara/Documentos/Anotações/Brendon/Alura/Asp.net_Core_REST_APIs/bytebank/obj/Debug/net6.0/ref/bytebank.dll
