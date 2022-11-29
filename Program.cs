@@ -1,47 +1,93 @@
 ﻿
 using bytebank;
 
-ContaCorrente contaDoBrendon = new ContaCorrente();
-contaDoBrendon.titular = "Brendon Rodrigo";
-contaDoBrendon.numero_Agencia = 15;
-contaDoBrendon.conta = "1010-X";
-contaDoBrendon.saldo = 350;
+// ContaCorrente contaDoBrendon = new ContaCorrente();
+// contaDoBrendon.nome_Agencia = "ByteBank Pinhais";
+// contaDoBrendon.titular = "Brendon Rodrigo";
+// contaDoBrendon.numero_Agencia = 15;
+// contaDoBrendon.conta = "1010-X";
+// contaDoBrendon.saldo = 350;
+// System.Console.WriteLine("Saldo da conta do Brendon é: " +contaDoBrendon.saldo);
 
-// Console.WriteLine("Saldo da conta do Brendon é:" +contaDoBrendon.saldo);
+// ContaCorrente contaDoBrendon2 = new ContaCorrente();
+// contaDoBrendon2.nome_Agencia = "ByteBank Centro";
+// contaDoBrendon2.titular = "Brendon Rodrigo";
+// contaDoBrendon2.numero_Agencia = 15;
+// contaDoBrendon2.conta = "1010-X";
+// contaDoBrendon2.saldo = 350;
+// System.Console.WriteLine("Saldo da conta do Brendon é: " +contaDoBrendon2.saldo);
 
-// contaDoBrendon.Depositar(100);
-// Console.WriteLine("Seu saldo é: " +contaDoBrendon.saldo);
+// System.Console.WriteLine(contaDoBrendon == contaDoBrendon2);
 
-// contaDoBrendon.Saque(50);
-// Console.WriteLine("Seu saldo é: " +contaDoBrendon.saldo);
+// // Console.WriteLine("Saldo da conta do Brendon é:" +contaDoBrendon.saldo);
 
-// Console.WriteLine($"Titular da conta: {contaDoBrendon.titular}");
-// Console.WriteLine($"Número da conta: {contaDoBrendon.conta}");
-// Console.WriteLine($"Agência: {contaDoBrendon.numero_Agencia}");
-// Console.WriteLine($"Saldo R$ {String.Format("{0:0.00}", contaDoBrendon.saldo)}");
+// // contaDoBrendon.Depositar(100);
+// // Console.WriteLine("Seu saldo é: " +contaDoBrendon.saldo);
 
-// Console.ReadKey();
+// // contaDoBrendon.Saque(50);
+// // Console.WriteLine("Seu saldo é: " +contaDoBrendon.saldo);
+
+// // Console.WriteLine($"Titular da conta: {contaDoBrendon.titular}");
+// // Console.WriteLine($"Número da conta: {contaDoBrendon.conta}");
+// // Console.WriteLine($"Agência: {contaDoBrendon.numero_Agencia}");
+// // Console.WriteLine($"Saldo R$ {String.Format("{0:0.00}", contaDoBrendon.saldo)}");
+
+// // Console.ReadKey();
 
 
-// //If para verificação de saldo em conta
-// if(contaDoBrendon.Saque(300) == true)
-// {
-//     Console.WriteLine("Saldo da conta do Brendon após o saque: " + contaDoBrendon.saldo);
-// }
-// else
-// {
-//     Console.WriteLine("Saldo insuficiente para saque!");
-// }
+// // //If para verificação de saldo em conta
+// // if(contaDoBrendon.Saque(300) == true)
+// // {
+// //     Console.WriteLine("Saldo da conta do Brendon após o saque: " + contaDoBrendon.saldo);
+// // }
+// // else
+// // {
+// //     Console.WriteLine("Saldo insuficiente para saque!");
+// // }
 
-ContaCorrente contaDaMaria = new ContaCorrente();
-contaDaMaria.titular = "Maria Souza";
-contaDaMaria.numero_Agencia = 17;
-contaDaMaria.conta = "1010-5";
-contaDaMaria.saldo = 100;
+// ContaCorrente contaDaMaria = new ContaCorrente();
+// contaDaMaria.titular = "Maria Souza";
+// contaDaMaria.numero_Agencia = 17;
+// contaDaMaria.conta = "1010-5";
+// contaDaMaria.saldo = 100;
 
-Console.WriteLine("Saldo da Maria: " + contaDaMaria.saldo);
+// Console.WriteLine("Saldo da Maria: " + contaDaMaria.saldo);
 
-contaDoBrendon.Transferir(50, contaDaMaria);
-Console.WriteLine("Saldo do Brendon: " + contaDoBrendon.saldo);
-Console.WriteLine("Saldo da Maria: " + contaDaMaria.saldo);
+// contaDoBrendon.Transferir(50, contaDaMaria);
+// Console.WriteLine("Saldo do Brendon: " + contaDoBrendon.saldo);
+// Console.WriteLine("Saldo da Maria: " + contaDaMaria.saldo);
 
+
+// ContaCorrente contaDoPedro = new ContaCorrente();
+// contaDoPedro.titular = "Pedro Silva";
+// System.Console.WriteLine(contaDoPedro.titular);
+// System.Console.WriteLine(contaDoPedro.saldo);
+// System.Console.WriteLine(contaDoPedro.numero_Agencia);
+// System.Console.WriteLine(contaDoPedro.conta);
+
+//**Tipos por valor**//
+
+// double valor = 300;
+// double valor2 = valor;
+
+
+//Iniciando Objeto
+
+Cliente cliente = new Cliente();
+cliente.nome = "Brendon Rodrigo";
+cliente.cpf = "114455689";
+cliente.profissao = "Analista";
+
+ContaCorrente conta = new ContaCorrente();
+conta.titular = cliente;
+conta.conta = "1010-X";
+conta.numero_agencia = 15;
+conta.nome_agencia = "ByteBank Centro";
+conta.saldo = 100;
+
+System.Console.WriteLine("Titular: " + conta.titular.nome);
+System.Console.WriteLine("Cpf: " + conta.titular.cpf);
+System.Console.WriteLine("Profissão: " + conta.titular.profissao);
+System.Console.WriteLine("Nome da Agência: " + conta.nome_agencia);
+System.Console.WriteLine("Nº da conta: " + conta.conta);
+System.Console.WriteLine("Saldo: " + conta.saldo);
