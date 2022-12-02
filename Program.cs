@@ -2,6 +2,8 @@
 using bytebank;
 using bytebank.Titular;
 using bytebank.Contas;
+using bytebank.Funcionarios;
+using bytebank.Utilitario;
 
 // ContaCorrente contaDoBrendon = new ContaCorrente();
 // contaDoBrendon.nome_Agencia = "ByteBank Pinhais";
@@ -132,3 +134,27 @@ ester.Profissao = "Analista";
 ester.Cpf = "789456123";
 
 System.Console.WriteLine("Total de clientes: " + Cliente.TotalClientesCadastrados);
+System.Console.WriteLine();
+
+System.Console.WriteLine("----Dados de Funcionarios----");
+Funcionario pedro = new Funcionario();
+pedro.Nome = "Pedro malazartes";
+pedro.Cpf = "123456789";
+pedro.Salario = 2000;
+
+System.Console.WriteLine("Nome:" +pedro.Nome);
+System.Console.WriteLine("Bonificação de: " +pedro.Nome + " será de: " + pedro.GetBonificacao());
+
+Diretor luciana = new Diretor();
+luciana.Nome = "Luciana Vieira";
+luciana.Cpf = "789456123";
+luciana.Salario = 5000;
+
+System.Console.WriteLine(luciana.Nome);
+System.Console.WriteLine(luciana.GetBonificacao());
+
+GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+gerenciador.Registrar(pedro);
+gerenciador.Registrar(luciana);
+
+System.Console.WriteLine("Total de bonificações: " +gerenciador.TotalDeBonificacao);
