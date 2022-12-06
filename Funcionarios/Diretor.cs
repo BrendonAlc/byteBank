@@ -10,9 +10,26 @@ namespace bytebank.Funcionarios
     {
 
 //Criar método publico para acessar campo privado da classe GerenciadorDeBonificacao
-        public double GetBonificacao()
+        public override double GetBonificacao() //override é uma permissão para redefinir a escrita
         {
-            return this.Salario;
+            return this.Salario * 0.5;
+        }
+
+        public Diretor(string cpf): base(cpf, 5000)
+        {
+            //System.Console.WriteLine("Criando um Diretor");
+        }
+
+        public override void AumentarSalario()
+        {
+            this.Salario *= 1.15;
+        }
+
+        //método de autenticação do usuario
+        public string Senha { get; set; }
+        public bool Autenticar(string senha)
+        {
+            return this.Senha == senha;
         }
     }
 }

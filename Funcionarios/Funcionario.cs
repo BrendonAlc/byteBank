@@ -6,16 +6,26 @@ using System.Threading.Tasks;
 
 namespace bytebank.Funcionarios
 {
-    public class Funcionario //implementar classe funcionario
+    public abstract class Funcionario //implementar classe funcionario como abstrata
     {
         public string Nome { get; set; }
-        public string Cpf { get; set; }
-        public double Salario { get; set; }
+        public string Cpf { get; private set; } //private para não atribuir diretamente no atributo dados
+        public double Salario { get; protected set; } //private para não atribuir diretamente no atributo dados ou protected para que eu possa atribuir a outras classes
+
+        public static int TotalDeFuncionarios { get; private set; }
 
         //metodo para bonificação
-        public double GetBonificacao()
+        public abstract double GetBonificacao();
+
+//Construtor para incrementar a quantidade de funcionário
+        public Funcionario(string cpf, double salario)
         {
-            return this.Salario * 0.10;
+            this.Salario = salario;
+            this.Cpf = cpf;
+            TotalDeFuncionarios++;
+            //System.Console.WriteLine("Criando um Funcionário.");
         }
+
+        public abstract void AumentarSalario();
     }
 }
