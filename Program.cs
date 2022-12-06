@@ -1,10 +1,11 @@
-﻿
+﻿using bytebank.SistemaInterno;
 using bytebank;
 using bytebank.Titular;
 using bytebank.Contas;
 using bytebank.Funcionarios;
 using bytebank.Utilitario;
 
+#region teste1
 // ContaCorrente contaDoBrendon = new ContaCorrente();
 // contaDoBrendon.nome_Agencia = "ByteBank Pinhais";
 // contaDoBrendon.titular = "Brendon Rodrigo";
@@ -122,39 +123,98 @@ using bytebank.Utilitario;
 
 // ContaCorrente conta7 = new ContaCorrente(285, "1111-Z");
 // System.Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
+#endregion 1
 
-Cliente sarah = new Cliente();
-sarah.Nome = "Sarah Silva";
-sarah.Profissao = "Psicóloga";
-sarah.Cpf = "123456789";
+#region teste2
+// Cliente sarah = new Cliente();
+// sarah.Nome = "Sarah Silva";
+// sarah.Profissao = "Psicóloga";
+// sarah.Cpf = "123456789";
 
-Cliente ester = new Cliente();
-ester.Nome = "Ester Almeida";
-ester.Profissao = "Analista";
-ester.Cpf = "789456123";
+// Cliente ester = new Cliente();
+// ester.Nome = "Ester Almeida";
+// ester.Profissao = "Analista";
+// ester.Cpf = "789456123";
 
-System.Console.WriteLine("Total de clientes: " + Cliente.TotalClientesCadastrados);
-System.Console.WriteLine();
+// System.Console.WriteLine("Total de clientes: " + Cliente.TotalClientesCadastrados);
+// System.Console.WriteLine();
 
-System.Console.WriteLine("----Dados de Funcionarios----");
-Funcionario pedro = new Funcionario();
-pedro.Nome = "Pedro malazartes";
-pedro.Cpf = "123456789";
-pedro.Salario = 2000;
+// System.Console.WriteLine("----Dados de Funcionarios----");
+// Funcionario pedro = new Funcionario("123456789", 2000);
+// pedro.Nome = "Pedro malazartes";
 
-System.Console.WriteLine("Nome:" +pedro.Nome);
-System.Console.WriteLine("Bonificação de: " +pedro.Nome + " será de: " + pedro.GetBonificacao());
+// System.Console.WriteLine("Nome:" +pedro.Nome);
+// System.Console.WriteLine("Bonificação de: " +pedro.Nome + " será de: " + pedro.GetBonificacao());
 
-Diretor luciana = new Diretor();
-luciana.Nome = "Luciana Vieira";
-luciana.Cpf = "789456123";
-luciana.Salario = 5000;
+// System.Console.WriteLine();
 
-System.Console.WriteLine(luciana.Nome);
-System.Console.WriteLine(luciana.GetBonificacao());
+// Diretor luciana = new Diretor("789456123");
+// luciana.Nome = "Luciana";
+// System.Console.WriteLine("Nome: " + luciana.Nome);
+// System.Console.WriteLine("Bonificação de " +luciana.Nome + " será de: " + luciana.GetBonificacao());
 
-GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
-gerenciador.Registrar(pedro);
-gerenciador.Registrar(luciana);
+// GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+// gerenciador.Registrar(pedro);
+// gerenciador.Registrar(luciana);
 
-System.Console.WriteLine("Total de bonificações: " +gerenciador.TotalDeBonificacao);
+// System.Console.WriteLine();
+// System.Console.WriteLine("-----Bonificações e funcionários-----");
+
+// System.Console.WriteLine("Total de bonificações: " +gerenciador.TotalDeBonificacao);
+// System.Console.WriteLine("Total de funcionários: " +Funcionario.TotalDeFuncionarios);
+
+// System.Console.WriteLine();
+// System.Console.WriteLine("---Aumento de salário para os colaboradores abaixo---");
+// pedro.AumentarSalario();
+// luciana.AumentarSalario();
+
+// System.Console.WriteLine("Novo salário do Pedro: " + pedro.Salario);
+// System.Console.WriteLine("Novo salário do Luciana: " + luciana.Salario);
+#endregion
+
+CalcularBonificacao();
+UsarSistema();
+
+
+//Método para Calcular bonificação
+void CalcularBonificacao()
+{
+    GerenciadorDeBonificacao gerenciador = new GerenciadorDeBonificacao();
+
+    Designer brendon = new Designer("123456");
+    brendon.Nome = "Brendon Alcantara";
+
+    Diretor luciana = new Diretor("789432");
+    luciana.Nome = "Luciana Vieira";
+
+    Auxiliar igor = new Auxiliar("789412");
+    igor.Nome = "Igor Dias";
+
+    GerenteDeContas camila = new GerenteDeContas("675123");
+    camila.Nome = "Camila Oliveira";
+
+    gerenciador.Registrar(camila);
+    gerenciador.Registrar(igor);
+    gerenciador.Registrar(brendon);
+    gerenciador.Registrar(luciana);
+
+    System.Console.WriteLine("Total de Bonificação = " + gerenciador.TotalDeBonificacao);
+}
+
+//Método para usar sistema
+
+void UsarSistema()
+{
+    SistemaInterno sistema = new SistemaInterno();
+
+    Diretor luciana = new Diretor("789432");
+    luciana.Nome = "Luciana Vieira";
+    luciana.Senha = "123";
+
+    GerenteDeContas juninho = new GerenteDeContas("789576");
+    juninho.Nome = "Juninho Alcantara";
+    juninho.Senha = "321";
+
+    sistema.Logar(luciana, "123");
+    sistema.Logar(juninho, "987"); 
+}
